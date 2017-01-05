@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>filter和not</title>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+//has:过滤
+
+
+$(function(){
+	//$('div').filter('.123').css('background','yellow');	
+	$('div').has('span').css('background','yellow');	
+	});
+</script>
+</head>
+
+<body>
+<div class="123">div1</div>
+<div >div2<span>span1</span></div>
+<div >div3</div>
+</body>
+</html>

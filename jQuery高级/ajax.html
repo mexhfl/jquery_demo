@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AJAX</title>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+/*$(function(){
+	
+	});*/
+	
+	$.ajax({
+		url:'xxx.php',
+		data:'name=hello&age=20',
+		type:'POST',
+		success:function(data){
+			alert(1);
+			},
+		error: function(){
+			alert(2);
+			}
+		});
+</script>
+
+</head>
+
+<body>
+
+<div id="box1">div1</div>
+<div></div>
+</body>
+</html>

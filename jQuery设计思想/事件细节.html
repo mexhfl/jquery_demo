@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>事件细节</title>
+<script  src="jquery-1.12.0.min.js"></script>
+<script>
+$(function(){
+/*	$('div').click(function(ev){
+		
+		//ev:event对象
+		//ev.pageX(相对于文档的)+滚动条宽度=clientX(相对于可视区)
+		//ev.which:keyCode
+		ev.preventDefault();//阻止默认事件
+		ev.stopPropagation();//阻止冒泡的操作
+		return false;//阻止默认事件+阻止冒泡的操作
+		});*/
+		
+		$('div').one('click',function(){    //写one只执行一次
+			alert(123);
+			});
+		
+	});
+</script>
+</head>
+
+<body>
+<div id="box">div1</div>
+
+</body>
+</html>

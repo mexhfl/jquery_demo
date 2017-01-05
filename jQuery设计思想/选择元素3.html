@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>选择元素</title>
+<script src="jquery-1.12.0.min.js"></script>
+</head>
+
+<body>
+	<ul>
+    	<li title="hello"></li>
+        <li class="box"></li>
+        <li title="hello"></li>
+        <li></li>
+        <li></li>
+    </ul>
+<script>
+/*
+$('li:first').css('background','blue');
+$('li:last').css('background','yellow');
+$('li:eq(2)').css('background','green');
+*/
+/*
+$('li:even').css('background','blue');
+$('li:odd').css('background','yellow');
+*/
+$('li').filter('.box').css('background','grey');
+$('li').filter('[title=hello]').css('background','blue');
+</script>
+</body>
+</html>

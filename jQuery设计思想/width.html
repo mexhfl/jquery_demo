@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>width</title>
+<style>
+.box{width:100px; height:100px; background:blue; padding:10px; border:10px #000 solid; margin:10px;}
+</style>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+$(function(){
+	alert($('.box').width());         //width 
+	alert($('.box').innerWidth());         //width+padding
+	alert($('.box').outerWidth());         //width+padding+border
+	alert($('.box').outerWidth(true));         //width+padding+border+padding
+	});
+</script>
+</head>
+
+<body>
+<div class="box">div</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>工具方法</title>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+/*
+var asd=$.noConflict();		//noConflict():防止冲突
+var $=10;
+asd(function(){
+	asd('#box1').css('background','blue');
+	});
+*/
+/*var str='{"name":"hello"}';
+alert($.parseJSON(str).name);		//解析JSON*/
+
+window.onload=function(){
+	var adiv=document.getElementsByTagName('div');		//类数组
+	$.makeArray(adiv).push();		//将类数组转成真数组
+	}
+</script>
+
+</head>
+
+<body>
+
+<div id="box1">div1</div>
+<div></div>
+</body>
+</html>

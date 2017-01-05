@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>事件的写法</title>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+$(function(){
+/*	$('div').on('click mouseover',function(){
+		alert(123);
+		});*/
+		
+/*	$('div').on({
+		'click' : function(){
+			alert('点击');
+			},
+		'mouseover' : function(){
+			alert('放置');
+			}
+		});*/
+	$('div').on('click mouseover',function(){
+		alert(123);
+		$('div').off('mouseover');
+		});
+		
+	});
+</script>
+</head>
+
+<body>
+<div>div1</div>
+<div>div2</div>
+<span>span</span>
+<div>div3</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>链式写法</title>
+<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+
+</head>
+
+<body>
+<div id="box">div</div>
+<script>
+/*var odiv=$('#box');
+odiv.css('background','blue');
+odiv.html('hello');
+odiv.click(function(){
+	alert('qwe');
+	});*/
+$('#box').css('background','yellow').html('hello').click(function(){
+	alert('qwe');
+	});
+</script>
+</body>
+</html>

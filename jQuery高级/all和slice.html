@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>warp</title>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+//add():组合元素
+//slice(x,y):选择第x到y(不包括y本身)的节点
+$(function(){
+
+	
+/*	var ele=$('div').add($('span'));
+	ele.css('background','yellow');*/
+	
+	$('li').slice(2,4).css('background','blue');
+	});
+</script>
+</head>
+
+<body>
+<div>div</div>
+<span>span</span>
+<ul>
+	<li>li</li>
+    <li>li</li>
+    <li>li</li>
+    <li>li</li>
+    <li>li</li>
+    <li>li</li>
+</ul>
+</body>
+</html>

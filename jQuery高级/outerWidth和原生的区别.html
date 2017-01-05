@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>outerWidth和原生的区别</title>
+<script src="jquery-1.12.0.min.js"></script>
+<style>
+#box{width:100px; height:100px; background:red; display:none;}
+</style>
+<script>
+//outerWidth
+//offsetWidth:获取不到隐藏元素的值
+$(function(){
+	//alert($('#box').get(0).offsetWidth);
+	alert($('#box').outerWidth());
+	});
+</script>
+</head>
+
+<body>
+<div id="box">div1</div>
+</body>
+</html>

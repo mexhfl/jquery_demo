@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>offsetParent</title>
+<style>
+*{margin:0; padding:0;}
+#div1{ width:200px; height:200px; background:blue; overflow:hidden; margin:20px; position:absolute;}
+#div2{width:100px; height:100px; background:red; margin:30px;}
+</style>
+
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+$(function(){
+	//parent:获取父级
+	//offsetParent:获取有定位的父级
+	$('#div2').offsetParent().css('background','grey');
+	});
+</script>
+
+
+</head>
+
+<body>
+
+<div id="div1">
+	<div id="div2"></div>
+</div>
+</body>
+</html>

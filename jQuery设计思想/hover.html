@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hover</title>
+<style>
+#div1{width:100px; height:100px; background:blue;}
+#div2{width:100px; height:100px; background:red;}
+</style>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+$(function(){
+	$('#div1').hover(function(){
+		//$(this).css('background','grey');
+		//$('#div2').hide(500);		//隐藏，参数写时间
+		//$('#div2').fadeOut(1000);		//淡出，时间默认是400
+		$('#div2').fadeTo(1000,0.5);	//指定变化到某个透明度
+		//$('#div2').slideUp(1000);
+		},function(){
+			//$(this).css('background','blue');
+			//$('#div2').show(500);		//出现，参数写时间
+			//$('#div2').fadeIn(1000);	//淡入，时间默认是400
+			//$('#div2').slideDown(1000);
+			});
+	});
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+
+</html>

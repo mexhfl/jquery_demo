@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>弹窗</title>
+<style>
+*{ margin:0; padding:0;}
+#login{ width:300px; height:300px; border:1px #000 solid; position:absolute;}
+#close{ position:absolute; right:0; top:0;}
+</style>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+
+$(function(){
+	$('#input1').click(function(){
+	
+	var ologin=$('<div id="login"><p>用户名：<input type="text"/></p><p>密码：<input type="text"/></p><div id="close">X</div></div>');
+	
+	$('body').append(ologin);
+	
+	$('#login').css('left',($(window).width()-ologin.outerWidth())/2);
+	$('#login').css('top',($(window).height()-ologin.outerHeight())/2);
+	
+	$(window).on('resize scroll',function(){
+		$('#login').css('left',($(window).width()-ologin.outerWidth())/2);
+		$('#login').css('top',($(window).height()-ologin.outerHeight())/2+$(window).scrollTop());
+		});
+		
+	$('#close').click(function(){
+		$('#login').remove();
+		});
+	});
+	
+
+	
+	});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<input type="button" value="点击" id="input1"/>
+<!--<div id="login">
+<p>用户名：<input type="text"/></p>
+<p>密码：<input type="text"/></p>
+<div id="close">X</div>
+</div>-->
+
+</body>
+</html>

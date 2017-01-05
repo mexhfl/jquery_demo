@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>方法函数化</title>
+<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+<script>
+/*window.onload=function(){
+	var odiv=document.getElementById('box');
+	odiv.onclick=function(){
+		alert(odiv.innerHTML);
+		}
+	}*/
+$(function(){
+	//var odiv=$('#box');
+	$('#box').click(function(){
+		alert($(this).html());
+		});
+	});
+	
+</script>
+</head>
+
+<body>
+<div id="box">asd</div>
+
+</body>	
+</html>

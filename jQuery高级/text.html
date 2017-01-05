@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text</title>
+<script src="jquery-1.12.0.min.js"></script>
+<style></style>
+<script>
+$(function(){
+	//alert($('div').html());
+	//alert($('div').text());		//text()方法会获取所有的内容而不是第一个(特例)
+	$('div').text('<h3>h3</h3>');
+	});
+</script>
+</head>
+
+<body>
+<div id="box">div1<span>span</span></div>
+<div>div2</div>
+<div>div3</div>
+</body>
+</html>

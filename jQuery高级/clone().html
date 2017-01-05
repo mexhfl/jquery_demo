@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>clone</title>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+//clone():可以接收一个参数，作用可以复制之前的操作行为
+$(function(){
+	//$('span').append($('div'));
+	$('div').click(function(){
+		alert(123);
+		});
+	$('div').clone(true).appendTo($('span'));
+	});
+</script>
+</head>
+
+<body>
+<div>div</div>
+<span>span</span>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>until</title>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+//nextUntil():到某个指定元素截止，参数写指定的元素，指定的元素已经为截止，向下执行
+//prevUntil():到某个指定元素截止，参数写指定的元素，指定的元素已经为截止，向上执行
+//parentsUntil():到某个指定元素截止，参数写指定的元素，指定的元素已经为截止，向外执行
+$(function(){
+
+	$('span').nextUntil('h2').css('background','blue');
+
+	});
+</script>
+</head>
+
+<body>
+<div>div</div>
+<span>span</span>
+<p>p</p>
+<h1>h1</h1>
+<h2>h2</h2>
+<em>em</em>
+</body>
+</html>

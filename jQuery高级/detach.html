@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>detach</title>
+<script src="jquery-1.12.0.min.js"></script>
+<style></style>
+<script>
+$(function(){
+	$('div').click(function(){
+			alert(123);
+		});
+	var odiv=$('div').detach();
+	$('body').append(odiv);
+	});
+</script>
+</head>
+
+<body>
+<div id="box">div1</div>
+</body>
+</html>

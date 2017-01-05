@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>取值和赋值</title>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+//jq中的取值是填一个属性，赋值是填多个属性
+
+$(function(){
+	var ali=$('li');
+	//alert(ali.html());       //当一组元素的时候，取值是一组中的第一个
+	ali.html('hello');       //当一组元素的时候，赋值值一组中的所有元素
+	});
+</script>
+</head>
+
+<body>
+<div id="box">div</div>
+<ul>
+	<li>aaa</li>
+    <li>bbb</li>
+    <li>ccc</li>
+    <li>ddd</li>
+</ul>
+</body>
+</html>

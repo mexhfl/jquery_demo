@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>插件</title>
+<style>
+#box{width:100px;  height:100px; background:blue; position:absolute;}
+</style>
+<script src="jquery-1.12.0.min.js"></script>
+<script>
+//$.extend:扩展工具方法下的插件形式 $.xxx() $.yyy()
+//$.fn.extend:扩展到jq对象下的插件形式 $().xxx()  $().yyy()
+$(function(){
+	
+	
+	$.fn.extend({
+		drag:function(){
+			var disx=0;
+			var disy=0;
+			var This = this;
+			this.mousedown(function(ev){
+				disx=ev.pageX-$(this).offset().left;
+				disy=ev.pageY-$(this).offset().top;
+				$(document).mousemove(function(ev){
+					This.css('left',ev.pageX-disx);
+					This.css('top',ev.pageY-disy);
+					});
+				$(document).mouseup(function(){
+					$(this).off();
+					});
+				return false;
+				});
+			},
+			aaa:function(){}
+		
+		
+		});
+	
+	
+	$.extend({
+	leftTrim:function(){
+			return str.replace(/^\s+/,'');
+					},
+	aaa:function(){
+			alert('aaa');
+		}
+	});
+	
+	
+	
+	
+var str='   hello   ';
+//alert('('+$.leftTrim(str)+')');
+//$.aaa();
+	$('#box').drag();
+	
+	
+	});
+
+
+</script>
+</head>
+
+<body>
+<div id="box">div1</div>
+</body>
+</html>

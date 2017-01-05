@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>节点的操作</title>
+<script src="jquery-1.12.0.min.js"></script>
+
+<script>
+//appendTo=appendChild
+$(function(){
+	//$('span').insertBefore($('div'));
+	//$('div').appendTo($('span'));
+	//$('div').prependTo($('span'));
+	
+	
+	
+	//区别：后续操作变了
+	
+	
+	//$('span').insertBefore($('div')).css('background','blue');
+	$('div').before($('span')).css('background','blue');
+	});
+</script>
+</head>
+
+<body>
+<div>div</div>
+<span>span</span>
+</body>
+</html>
